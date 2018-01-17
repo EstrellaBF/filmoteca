@@ -18,12 +18,3 @@ a {
 .t-w {
     color: #FFF;
 }
-
-/* HTML INDEX */
-header {
-    position: fixed;
-    top: 0;
-}
-.gallery figure {
-    padding: 10px;
-}
