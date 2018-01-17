@@ -2,7 +2,7 @@
 Organización
 - Nos Organizamos y todas realizamos una lluvia de ideas para poder evaluar la problemática ,según nuestras propias experiencias.
 Ideas (debatimos):  
-![Sin titulo](assets/images/encuesta uno.png)
+![Sin titulo](assets/images/encuestauno.png)
 
 - Luego hicimos un formulario de preguntas abiertas para nuestros futuros usuarios.
 Estas fueron sus respuestas:  
