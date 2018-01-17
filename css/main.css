@@ -1,0 +1,29 @@
+/***** Clases generales *****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/***** Clases reutilizables *****/
+/* Colores de fondo */
+.bg-v {
+    background-color: #679797;
+}
+/* Colores de letra */
+.t-w {
+    color: #FFF;
+}
+
+/* HTML INDEX */
+header {
+    position: fixed;
+    top: 0;
+}
+.gallery figure {
+    padding: 10px;
+}
