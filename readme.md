@@ -1,4 +1,4 @@
-![Sin titulo](assets/images/header.png)
+![Sin titulo](assets/images/header.png)  
 **Challenge Hackathon**  
 ### **Requerimientos**
 Una web-App responsivo con la temática "consumo de películas" en la cual creamos una solución utilizando el API de Open Movie Database.
