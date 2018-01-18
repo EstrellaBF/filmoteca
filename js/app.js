@@ -26,7 +26,7 @@ $(document).ready(function() {
           // console.log(value); //Objeto que contiene tittle, year, etc
           console.log(movieSearch[index]);
           output += `
-            <div class="col-xs-6 col-md-3 clearfix">
+            <div class="col-xs-6 col-md-3">
               <div class="movie-box text-center">
                 <img src="${value.Poster}">
                 <h5>${value.Title}</h5>
