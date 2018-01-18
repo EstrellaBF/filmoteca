@@ -11,10 +11,10 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-// img src=" ' + result.user.photoURL + ' " /
+  // Función para buscar la película por título
   function getMovies(searchText) {
     console.log(searchText);
-    axios.get('http://www.omdbapi.com/?s=' + searchText+'&apikey=3a0eede3')
+    axios.get('http://www.omdbapi.com/?s=' + searchText +'&apikey=3a0eede3')
       .then(function(response) {
         // Un array con todos los títulos que coinciden
         console.log(response.data.Search); 
@@ -26,8 +26,8 @@ $(document).ready(function() {
           // console.log(value); //Objeto que contiene tittle, year, etc
           console.log(movieSearch[index]);
           output += `
-            <div class="col-xs-6 col-md-3">
-              <div class="movie-box">
+            <div class="col-xs-6 col-md-3 clearfix">
+              <div class="movie-box text-center">
                 <img src="${value.Poster}">
                 <h5>${value.Title}</h5>
               </div>
