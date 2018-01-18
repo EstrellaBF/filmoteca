@@ -28,6 +28,8 @@ header {
     padding: 10px;
 }
 
+/* Estrella */
+
 /* Input Index */
 .input-search-section {
     background-color: #282829;
@@ -48,4 +50,8 @@ input#search-movie-input:focus, input#search-movie-input:active {
 .icon-search-input {
     color: #F6EC14;
     background-color: #282829;
+}
+
+.movie-box img {
+    width: 100%;
 }
