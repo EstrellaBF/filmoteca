@@ -1,0 +1,75 @@
+/***** Clases generales *****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/***** Clases reutilizables *****/
+/* Colores de fondo */
+.bg-v {
+    background-color: #679797;
+}
+/* Colores de letra */
+.t-w {
+    color: #FFF;
+}
+
+/* HTML INDEX */
+header {
+    position: fixed;
+    top: 0;
+}
+.gallery figure {
+    padding: 10px;
+}
+
+/* ESTRELLA */
+
+/* Input Index */
+.input-search-section {
+  background-color: #282829;
+}
+
+.search-movie {
+  margin: 1.3em 0;
+}
+
+/* active para explorer */
+input#search-movie-input:focus, input#search-movie-input:active {
+  -moz-box-shadow: 0px 0px 2px 1px rgba(246,236,20,1);
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(246,236,20,1);
+  -moz-box-shadow: 0px 0px 2px 1px rgba(246,236,20,1);
+  box-shadow: 0px 0px 2px 1px rgba(246,236,20,1);
+}
+
+.icon-search-input {
+  color: #F6EC14;
+  background-color: #282829;
+}
+
+.movie-box {
+  height: 53vh;
+}
+
+.movie-box img {
+  width: 100%;
+}
+
+.movie-box h5 {
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Section Movies */
+.movies-search-section {
+  margin-top: 2rem;
+}
+
+/* Movie HTML */
+.movie-info-picked {
+  
+}
