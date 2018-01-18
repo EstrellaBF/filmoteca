@@ -17,6 +17,7 @@ $(document).ready(function() {
     axios.get('http://www.omdbapi.com/?s=' + searchText +'&apikey=3a0eede3')
       .then(function(response) {
         // Un array con todos los títulos que coinciden
+        console.log(response); 
         console.log(response.data.Search); 
         var movieSearch = response.data.Search;
         var output = '';
@@ -34,9 +35,6 @@ $(document).ready(function() {
               </div>
             </div>
           `;
-          // $moviesSelected.append('<div class="col-xs-6"><div class="movie-wrap"><img src=""><h4><a href=""></div></div>');
-          // $('.movie-wrap').find('img').prop('src', movieSearch[index].Poster)   
-
         });
         $moviesSelected.html(output);
         
@@ -48,6 +46,7 @@ $(document).ready(function() {
           var titlePicked = $(this).text();
           // Almacenando temporalmente el nombre del título y la foto
           localStorage.saveTitlePicked = titlePicked;
+          $(location).attr('href','views/movie.html');
         });
 
       })

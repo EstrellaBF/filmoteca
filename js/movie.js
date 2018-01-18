@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var $movieInfoPicked = $('#movie-info-picked');
+  var $viewedButton = $('#viewed-button')
 
   // Pluggin
   $('#star1').rating('votar.php', {maxvalue: 5, curvalue:1, id:20});
@@ -26,36 +27,9 @@ $(document).ready(function() {
       console.log(error);
     });
 
-
-  // axios.get('http://www.omdbapi.com/?s=' + searchText +'&apikey=3a0eede3')
-  // .then(function(response) {
-  //   // Un array con todos los títulos que coinciden
-  //   console.log(response.data.Search); 
-  //   var movieSearch = response.data.Search;
-  //   var output = '';
-  //   // Recorrer en un lugar de for
-  //   $.each(movieSearch, function(index, value) {
-  //     // console.log(index); // devuelve posición, 0, 1, 2, etc    
-  //     // console.log(value); //Objeto que contiene tittle, year, etc
-  //     // console.log(movieSearch[index]);
-  //     // console.log(movieSearch);
-  //     output += `
-  //       <div class="col-xs-6 col-md-3 clearfix">
-  //         <div class="movie-box text-center">
-  //           <img src="${value.Poster}">
-  //           <button type="button" class="btn btn-info pick-this-movie">${value.Title}</button>
-  //         </div>
-  //       </div>
-  //     `;
-      // $moviesSelected.append('<div class="col-xs-6"><div class="movie-wrap"><img src=""><h4><a href=""></div></div>');
-      // $('.movie-wrap').find('img').prop('src', movieSearch[index].Poster)   
-
-    // });
-
-
-
-
-
-
+  // Evento para el boton de visto
+  $viewedButton.on('click', function() {
+    
+  });
 
 });
