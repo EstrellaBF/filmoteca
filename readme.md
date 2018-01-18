@@ -1,23 +1,35 @@
-## Dia 1
-Organización
-- Nos Organizamos y todas realizamos una lluvia de ideas para poder evaluar la problemática ,según nuestras propias experiencias.
-Ideas (debatimos):  
-![Sin titulo](assets/images/encuestauno.png)  
-![sin titulo](assets/images/encuestagrafico.png)
+![Sin titulo](assets/images/header.png)
+**Challenge Hackathon**  
+### **Requerimientos**
+Una web-App responsivo con la temática "consumo de películas" en la cual creamos una solución utilizando el API de Open Movie Database.
 
-- Luego hicimos un formulario de preguntas abiertas para nuestros futuros usuarios.
-Estas fueron sus respuestas:  
-![Sin titulo](assets/images/encuestados.png)
+### **Problematica**
 
-Y llegamos a la conclusión de una problemática :
-Había personas que querían tener un lugar para guardar sus películas favoritas un historial que les recuerde que películas han visto ,que películas, querían guardar para verlas después y cuales habían marcado como favoritas.
+Según las entrevistas que realizamos hay muchas personas que quisieran tener un lugar en la Web o App para guardar sus películas favoritas.
 
-Netflix nuestra principal competencia no tenia esta opción (No le daba mucha importancia a esa necesidad ya que hay una opción en la que registraban las películas vistas o seleccionadas pero no de manera detallada.)
+![Sin titulo](assets/images/encuestauno.png)
 
-- Así se realizó Butaca una Web app que te permite tener una agenda de películas y así al ingresar puedas encontrar los nombres de las películas guardadas, vistas y marcadas como favoritas de manera ordenada y detallada para un momento de diversión y pelis.
-![Sin titulo](assets/images/1.jpg)
+Netflix nuestra principal competencia no tenia esta opción (No le daba mucha importancia a esa necesidad ya que hay una opción en la que registran las películas vistas o seleccionadas pero no de manera detallada.)
 
-![Sin titulo](assets/images/3.jpg)
+![Sin titulo](assets/images/encuestadoss.png)
 
-![Sin titulo](assets/images/pizarra.jpg)
-- Herramientas Utilizadas "Trello".
+## **Nuestro Producto**
+Y así nació Filmoteca una Web-App en la cual ademas de buscar las películas que desees y ver su información podrás guardarlas en tu perfil de manera detallada,la cual te recuerda que películas has visto ,que películas has guardado para verlas después y cuales has marcado como favoritas. Y la podrás consultar cuando desees a su vez podrás consultar artículos de tus películas favoritas nosotros te ayudaremos con tu búsqueda.
+
+Para ingresar a Filmoteca tienes que registrarte colocando tu nombre, correo y contraseña luego inicias sesión ,buscas tu películas favorita das click en la película ,y te enviaran a la vista en la cual podrás verificar la información comentar y marcar como guardado visto o favorito así tu información estará segura para consultarla después en tu perfil .
+
+### Organización
+[Herramienta de trabajo "TRELLO"](https://trello.com/b/JIsne98s/organizaci%C3%B3n-grupo-1)
+
+### Herramientas  
+- HTML5  
+- CSS3  
+- Jquery  
+- JS  
+- Framework Bootstrap
+- API de Open Movie Database (OMDB)
+
+### Integrantes  
+- Estrella Benites
+- Alejandra Hoces  
+- Lidia Ramirez

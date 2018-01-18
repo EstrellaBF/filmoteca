@@ -6,60 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>profile</title>
     <link rel="stylesheet" href="../vendors/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
-    <header>
-    <!--Barra de navegacion -->
-          <nav class="navbar navbar-default role="navigation"">
-                <div class="container-fluid">
-                  <div class="navbar-header ">
-                        <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" alt=""></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class=""><a href="#"><span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Peliculas</a></li>
-                            <li><button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Cerrar Sesión</button></li>
-                        </ul>
-                    </div>
-                 </div>
-             </nav>
-         </header>
-          <section>
-            <div class="container-fluid full hero">
-                <div class="row">
-                    <div class="col-md-offset-7 col-md-5 col-xs-offset-2 col-xs-10 section-2">
-                    <!--Movile-->
-                        <div class="card-profile">
-                            <img src="../assets/images/user.png" alt="user">
-                            <span><p>NAME</p></span>
-                        </div>
-                        <div class="">
-                            <span><i class="fa fa-plus" aria-hidden="true"></i></span>
-                        </div>
+      <header>
+   <!--Barra de navegacion -->
+         <nav class="nav-wrapper bg-header" role="navigation">
+               <div class="container-fluid ">
+                 <div class="navbar-header ">
+                      <img src="../assets/images/logo.png" alt="" class="img-responsive profile-logo">
+                      <p class="name-logo">Filmoteca</p>
+                   </div>
+                      <div class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">
+                          <ul class="nav navbar-nav navbar-right">
+                              <li><a href="#">Inicio</a></li>
+                              <li><a href="#">Ayuda</a></li>
+                              <li><a href="#">Cerrar Sesión</a></li>
+                          </ul>
                       </div>
                    </div>
-               </div>
-         </section>
-         <section>
-           <div class="container-fluid full hero">
-               <div class="row">
-                   <div class="col-md-offset-7 col-md-5 col-xs-offset-2 col-xs-10">
-                       <!--imagenes 8 y 6-->
+               </nav>
+           </header>
+          <section class="profile-bg">
+              <div class="container-fluid ">
+                  <div class="row">
+                      <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-5 col-xs-10">
+                        <form id="form1" runat="server">
+                          <div class="card-profile">
+                              <img src="../assets/images/user1.jpg" alt="user" class="img-responsive profile-user" id="image1">
+                              <button class="caption" id="files" onclick="document.getElementById('file').click(); return false;"><i class="glyphicon glyphicon-camera"></i></button>
+                              <input class="inputfile" type="file" id="file" onchange="readURL(this);" accept="image/*" />
+                              <span><p>Nombre Usuario</p></span>
+                          </div>
+                        </form>
+                          <div class="profile-counter">
+                            <button type="button" name="button" class="profile-btn">
+                              <div id="counter">0</div>
+                              <p>Vistos</p>
+                            </button>
+                            <button type="button" name="button" class="profile-btn">
+                              <div id="counter">0</div>
+                              <p>Guardados</p>
+                           </button>
+                            <button type="button" name="button" class="profile-btn">
+                              <div id="counter">0</div>
+                              <p>Favoritos</p>
+                            </button>
+                          </div>
+                        </div>
                      </div>
-                     <div class="view-mobile">
-                        <span><i class="fa fa-home" aria-hidden="true"></i></span>
-                        <span><i class="fa fa-film" aria-hidden="true"></i></span>
+                 </div>
+           </section>
+           <section class="profile-muvi">
+             <div class="container-fluid">
+                 <div class="row">
+                     <div class="col-md-offset-2 col-md-6 col-sm-offset-2 col-sm-10 col-xs-offset-1 col-xs-10">
+                       <img src="../assets/images/pelis1.png" alt="" class="img-responsive profile-movies">
+                       <div class=""></div>
+                       <div class=""></div>
+                       <div class=""></div>
+                       <div class=""></div>
+                       <div class=""></div>
+                       <div class=""></div>
+                       <div class=""></div>
+                       <div class=""></div>
+                       <div class=""></div>
+                         <!--imagenes 8 y 6-->
                      </div>
-                  </div>
+                    <div class="view-movile buttons-mobile">
+                         <button type="button" name="button" class="btn-mobile"><i class="fa fa-home fa-lg" aria-hidden="true"></i></button>
+                         <button type="button" name="button" class="btn-mobile"><i class="fa fa-question fa-lg" aria-hidden="true"></i></button>
+                         <button type="button" name="button" class="btn-mobile"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
+                   </div>
+                </div>
               </div>
-         </section>
-         <footer>
-           © Copyright 2018 - Filmoteca.com
-         </footer>
+           </section>
+           <footer class="view-desktop profile-footer text-center">
+             © Copyright 2018 - Filmoteca.com
+           </footer>
+
       <!-- scripts -->
      <script src="../vendors/js/jquery-3.2.1.min.js"></script>
      <script src="../js/app.js"></script>
