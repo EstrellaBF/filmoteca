@@ -24,23 +24,36 @@ $(document).ready(function() {
         $.each(movieSearch, function(index, value) {
           // console.log(index); // devuelve posición, 0, 1, 2, etc    
           // console.log(value); //Objeto que contiene tittle, year, etc
-          console.log(movieSearch[index]);
+          // console.log(movieSearch[index]);
           output += `
-            <div class="col-xs-6 col-md-3">
+            <div class="col-xs-6 col-md-3 clearfix">
               <div class="movie-box text-center">
                 <img src="${value.Poster}">
-                <h5>${value.Title}</h5>
+                <button type="button" class="btn btn-info pick-this-movie">${value.Title}</button>
               </div>
             </div>
           `;
           // $moviesSelected.append('<div class="col-xs-6"><div class="movie-wrap"><img src=""><h4><a href=""></div></div>');
-          // $('.movie-wrap').find('img').prop('src', movieSearch[index].Poster)
+          // $('.movie-wrap').find('img').prop('src', movieSearch[index].Poster)   
+
         });
         $moviesSelected.html(output);
+        
+        
+        // Función para jalar el contenido del botón al hacer click
+        $('.pick-this-movie').on('click', function() {
+          var posterMoviePicked = $(this).parent();
+          console.log(posterMoviePicked.find('img').attr('src'));
+          var titlePicked = $(this).text();
+          // Almacenando temporalmente el nombre del título y la foto
+          localStorage.saveTitlePicked = titlePicked;
+        });
+
       })
-      .catch(function (err) {
+      .catch(function(err) {
         console.log(err);
       });
   };
+
 
 });

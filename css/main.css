@@ -68,3 +68,8 @@ input#search-movie-input:focus, input#search-movie-input:active {
 .movies-search-section {
   margin-top: 2rem;
 }
+
+/* Movie HTML */
+.movie-info-picked {
+  
+}
