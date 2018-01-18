@@ -1,3 +1,6 @@
+.body{
+    padding-top: 60px;
+}
 /***** Clases generales *****/
 * {
     margin: 0;
@@ -14,7 +17,39 @@ a {
 .bg-v {
     background-color: #679797;
 }
+.bg-g {
+    background-color: gray;
+}
+.bg-b {
+    background-color: #282829;
+}
+.bg-y {
+    background-color: #F6EC14;
+}
 /* Colores de letra */
 .t-w {
     color: #FFF;
+}
+.t-y {
+    color: #F6EC14;
+}
+.t-y:hover, .t-y:active {
+    color: #F6EC14;
+}
+.terms {
+    color: #0079bf;
+}
+.navbar-content span {
+    float: right;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.imgLogo {
+    width: 50px;
+}
+
+#carousel-explication {
+    height: 250px;
 }
