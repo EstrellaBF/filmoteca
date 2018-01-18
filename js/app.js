@@ -20,11 +20,12 @@ $(document).ready(function() {
         console.log(response.data.Search); 
         var movieSearch = response.data.Search;
         var output = '';
-        // Recosrrer en un lugar de for
+        // Recorrer en un lugar de for
         $.each(movieSearch, function(index, value) {
           // console.log(index); // devuelve posición, 0, 1, 2, etc    
           // console.log(value); //Objeto que contiene tittle, year, etc
           // console.log(movieSearch[index]);
+          // console.log(movieSearch);
           output += `
             <div class="col-xs-6 col-md-3 clearfix">
               <div class="movie-box text-center">
