@@ -141,7 +141,7 @@ function begin() {
       var email = $('#user').val();
       var password = $('#key').val();
       firebase.auth().signInWithEmailAndPassword(email, password).then(function(result) {
-        $('#title-header').html(
+        $('.title-header').html(
           '<div id="title-header" class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">'+
           '<ul class="nav navbar-nav navbar-right">'+
             '<li>'+
