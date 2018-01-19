@@ -171,7 +171,26 @@ function begin() {
   /* Estrella  */
   var $searchForm = $('#search-form');
   var $moviesSelected = $('#movies-selected');
+  var $clickMoviePredetermined = $('.click-movie-predetermined');
   console.log($moviesSelected);
+
+  // Evento para las películas predeterminadas
+  $clickMoviePredetermined.on('click', function() {
+    // console.log($(this).text());
+    var movieIdClick = $(this).parent().find('p').text();
+    console.log(movieIdClick);
+    // Make a request for a user with a given ID
+    axios.get('http://www.omdbapi.com/?i=' + movieIdClick + '&apikey=3a0eede3')
+      .then(function(response) {
+        console.log(response.data);
+        localStorage.saveTitlePicked = response.data.Title;
+        localStorage.savePosterPicked = response.data.Poster;
+        $(location).attr('href', 'views/movie.html');
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  });
 
   // Evento para poder capturar la búsqueda de la película y pasar función 
   $searchForm.on('submit', function(event) {
@@ -223,12 +242,12 @@ function begin() {
           localStorage.idPicked = posterMoviePicked.find('p');
           $(location).attr('href', 'views/movie.html');
         });
-
       })
       .catch(function(err) {
         console.log(err);
       });
   };
+
   /* Alejandra Hoces */
   /* ------------ FUNCIONALIDAD PARA SUBIR FOTOS ------------*/
   /** Función para postear  */

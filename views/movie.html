@@ -11,9 +11,9 @@
   <!-- Framework Boostrap CSS -->
   <link rel="stylesheet" href="../vendors/bootstrap-3.3.7/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <!-- Pluggin -->
   <link rel="stylesheet" href="../vendors/pluggins/css/delete.gif">
   <link rel="stylesheet" href="../vendors/pluggins/css/rating.css">
@@ -22,7 +22,39 @@
   <link rel="stylesheet" href="../css/main.css">
 </head>
 
-<body>
+<body> 
+  <header>
+  <!--Barra de navegacion -->
+  <nav class="nav-wrapper bg-header" role="navigation">
+    <div class="container-fluid ">
+      <div class="navbar-header ">
+        <button type="button" class="navbar-toggle collapsed t-w" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <div class="div-user view-movile">
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+          </div>
+        </button>
+        <img src="assets/images/logo.png" alt="" class="img-responsive profile-logo">
+        <!--<p class="name-logo">Filmoteca</p>-->
+        <img src="assets/icons/titulo.png" alt="" class="">
+
+      </div>
+      <div class="div-user view-desktop">
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+      </div>
+      <div class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#modal-sesion" data-toggle="modal">Iniciar Sesión</a>
+          </li>
+          <li>
+            <a href="#modal-registry" data-toggle="modal" class="t-w">Registrate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
   <main>
     <div class="container">
       <div class="row">
@@ -81,8 +113,8 @@
         </div>
         <div class="col-xs-4">
           <div class="btn-group btn-group-justified" role="group" aria-label="...">
-            <div class="btn-group" id="" role="group">
-              <button id="viewed-button" type="button" class="btn btn-default">
+            <div class="btn-group" id="viewed-button" role="group">
+              <button type="button" class="btn btn-default">
                 <i class="fa fa-eye" aria-hidden="true"></i>
               </button>
             </div>
@@ -134,9 +166,6 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <!-- JS Personalizado -->
   <script type="text/javascript" src="../js/movie.js"></script>
-  <!--  -->
-  <script type="text/javascript" src="../js/save.js"></script>
-  
 </body>
 
 </html>
