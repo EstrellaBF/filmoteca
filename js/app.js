@@ -73,19 +73,24 @@ function begin() {
       localStorage.nombres = $('#names').val();
       localStorage.email = $('#email').val();
       localStorage.password = $('#password').val();
-      firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
-        firebase.database().ref('registrito')
-          .set({
-            nombres: names
-          });
-        alert('Registro OK');
+
+      
+      firebase.auth().createUserWithEmailAndPassword(email, password).then(function(result) {
+        var newUser = {
+          uid : result.uid,
+          names : localStorage.nombres,
+          email : localStorage.email
+        };
+        
+        firebase.database().ref('registro/'+result.uid).set(newUser); 
+        
+        alert('Registro OK');     
       }).catch(function(error) {
-        /** Handle Errors here. */
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
-        alert(errorMessage);
+        alert('Usuario ya registrado');
       });
+
       $('#names').val('');
       $('#email').val('');
       $('#password').val('');
@@ -146,26 +151,6 @@ function begin() {
         }
       });
 
-      /* Prueba*/
-
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          var displayName = user.displayName;
-          var email = user.email;
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
-          console.log(uid);
-        } else {
-          // User is signed out.
-          // ...
-        }
-      });
-
-      /* Prueba*/
     });
   };
 
