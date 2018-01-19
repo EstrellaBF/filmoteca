@@ -1,7 +1,7 @@
 function begin() {
   var btnRegistry = $('#btnRegistry');
   var btnAccess = $('#btnAccess');
-
+  var tempAccess = false;
   registry();
   login();
 
@@ -144,12 +144,18 @@ function begin() {
         $('.title-header').html(
           '<div id="title-header" class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">'+
           '<ul class="nav navbar-nav navbar-right">'+
-            '<li>'+
-              '<a href="#modal-sesion" data-toggle="modal">'+localStorage.nombres+'</a>'+
-            '</li>'+
+            '<li class="dropdown">'+
+              '<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'+localStorage.nombres+'<span class="caret"></span></a>'+
+              '<ul class="dropdown-menu">'+
+                '<li><a href="views/profile.html">Perfil</a></li>'+
+                '<li><a href="index.html">Cerrar Sesión</a></li>'+
+              '</ul>'+
+              '</li>'+
           '</ul>'+
         '</div>'
         );
+        tempAccess = true;
+        localStorage.tempAccess = tempAccess;
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;

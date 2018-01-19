@@ -196,6 +196,9 @@ input#search-movie-input:focus, input#search-movie-input:active {
 .title-header li a {
   color: white;
 }
+.dropdown-menu {
+  background-color: #282829;
+}
 .inputfile {
   position: absolute;
   top: 0;
