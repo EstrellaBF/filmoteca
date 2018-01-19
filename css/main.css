@@ -25,6 +25,9 @@
 .t-y:hover, .t-y:active {
     color: #F6EC14;
 }
+.t-b {
+  font-weight: bold;
+}
 .div-user {
   float: right;
   margin: 0 10px;

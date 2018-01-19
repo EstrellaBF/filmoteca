@@ -24,17 +24,21 @@
     <nav class="nav-wrapper bg-header" role="navigation">
       <div class="container-fluid ">
         <div class="navbar-header ">
+          <button type="button" class="navbar-toggle collapsed t-w" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false">
+            <div class="div-user view-movile">
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+            </div>
+          </button>
           <img src="assets/images/logo.png" alt="" class="img-responsive profile-logo">
           <!--<p class="name-logo">Filmoteca</p>-->
           <img src="assets/icons/titulo.png" alt="" class="">
-          <div class="div-user view-movile">
-              <i class="fa fa-user-o" aria-hidden="true"></i>            
-          </div>
+
         </div>
         <div class="div-user view-desktop">
-            <i class="fa fa-user-o" aria-hidden="true"></i>            
+          <i class="fa fa-user-o" aria-hidden="true"></i>
         </div>
-        <div class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">
+        <div id="title-header" class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#modal-sesion" data-toggle="modal">Iniciar Sesión</a>
@@ -50,23 +54,22 @@
   <!-- Modal Registrar -->
   <div class="container">
     <div class="modal fade" tabindex="-1" role="dialog" id="modal-registry">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <figure class="col-xs-offset-3 col-sm-offset-3 col-lg-offset-3 col-xs-6 col-sm-6 col-lg-6">
-              <img class="img-responsive" src="assets\images\sesion.png" alt="">
-            </figure>
+            <h3 class="text-center">Únete a Filmoteca</h3>
+            <h5 class="text-center">Y agenda las peliculas que has visto o verás</h5>
           </div>
           <div class="modal-body">
             <div class="row">
-              <form class="col-xs-offset-2 col-xs-8">
+              <form class="col-xs-offset-1 col-xs-10">
                 <div class="input-group form-group">
-                  <label class="sr-only control-label">Nombres </label>
+                  <label class="sr-only control-label">Nombre y apellido </label>
                   <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-user"></i>
+                    <i class="glyphicon glyphicon-pencil"></i>
                   </span>
-                  <input id="names" class="form-control" type="text" placeholder="Nombres" />
+                  <input id="names" class="form-control" type="text" placeholder="Nombre y apellido" />
                 </div>
                 <div class="input-group form-group">
                   <label class="sr-only control-label">Correo </label>
@@ -80,15 +83,15 @@
                   <span class="input-group-addon">
                     <i class="glyphicon glyphicon-lock"></i>
                   </span>
-                  <input id="password" class="form-control" type="password" placeholder="Contraseña de 8 a más caracteres" name="pass" />
+                  <input id="password" class="form-control" type="password" placeholder="Contraseña" name="pass" />
                 </div>
                 <div class="form-group">
                   <input type="checkbox" class="text-center">
-                  <span class="term-add"> Estoy de acuerdo con </span>
+                  <span class="term-add">Estoy de acuerdo con los</span>
                   <span class="terms">Terminos de servicios</span>
                 </div>
                 <div class="form-group col-xs-offset-2 col-xs-8">
-                  <button id="btnRegistry" class="btn form-control t-y bg-b" data-dismiss="modal" disabled>Registrate</button>
+                  <button id="btnRegistry" class="btn form-control t-y bg-b t-b" data-dismiss="modal" disabled>Registrate</button>
                 </div>
               </form>
             </div>
@@ -100,7 +103,7 @@
   <!-- Modal Iniciar Sesion -->
   <div class="container">
     <div class="modal fade" tabindex="-1" role="dialog" id="modal-sesion">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -110,13 +113,13 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <form class="col-xs-offset-2 col-xs-8">
+              <form class="col-xs-offset-1 col-xs-10">
                 <div class="input-group form-group">
                   <label class="sr-only control-label">Usuario </label>
                   <span class="input-group-addon">
                     <i class="glyphicon glyphicon-user"></i>
                   </span>
-                  <input id="user" class="form-control" type="text" placeholder="Usuario" />
+                  <input id="user" class="form-control" type="text" placeholder="Correo" />
                 </div>
                 <div class="input-group form-group">
                   <label class="sr-only">Contraseña</label>
@@ -127,7 +130,7 @@
                 </div>
                 <div class="form-group col-xs-offset-2 col-xs-8">
                   <button id="btnAccess" class="btn bg-b form-control" disabled data-dismiss="modal">
-                    <span class="t-y">Acceder</span>
+                    <span class="t-y t-b">Acceder</span>
                   </button>
                 </div>
               </form>
@@ -151,19 +154,19 @@
         <div class="item active">
           <img src="http://www.cinesparaguay.com.py/wp-content/uploads/2017/08/jumanji2.jpg" class="img-responsive" alt="...">
           <div class="carousel-caption">
-            <h1>Bienvenido a Filmoteca</h1>
+            <h1>Guarda y Valora las peliculas que vistes o verás</h1>
           </div>
         </div>
         <div class="item">
-            <img src="https://www.theedgesusu.co.uk/wp-content/uploads/2017/11/coco.jpg" class="img-responsive" alt="...">
-            <div class="carousel-caption">              
-              <h1>Olvidate de los dias aburridos</h1>
-            </div>
+          <img src="https://www.theedgesusu.co.uk/wp-content/uploads/2017/11/coco.jpg" class="img-responsive" alt="...">
+          <div class="carousel-caption">
+            <h1>Olvidate de los días aburridos, disfruta</h1>
           </div>
+        </div>
         <div class="item">
           <img src="https://s4.eestatic.com/2017/07/03/cultura/cine/Cine_228489623_38377958_1706x960.jpg" class="img-responsive" alt="...">
-          <div class="carousel-caption">            
-            <h1>Ahora Guarda y Valora las peliculas que vistes o verás</h1>
+          <div class="carousel-caption">
+            <h1>Usa tu agenda Filmoteca</h1>
           </div>
         </div>
       </div>

@@ -140,8 +140,16 @@ function begin() {
       event.preventDefault();
       var email = $('#user').val();
       var password = $('#key').val();
-      firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-        $('span.content-header').html('<h5>' + localStorage.nombres + '</h5>');
+      firebase.auth().signInWithEmailAndPassword(email, password).then(function(result) {
+        $('#title-header').html(
+          '<div id="title-header" class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">'+
+          '<ul class="nav navbar-nav navbar-right">'+
+            '<li>'+
+              '<a href="#modal-sesion" data-toggle="modal">'+localStorage.nombres+'</a>'+
+            '</li>'+
+          '</ul>'+
+        '</div>'
+        );
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
