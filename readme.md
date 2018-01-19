@@ -34,11 +34,11 @@ Para ingresar a Filmoteca tienes que registrarte colocando tu nombre, correo y c
 
 > vistas/Mobile
 
-![ Texto alter](assets/images/image.PNG)
-![ Texto alter](assets/images/image1.PNG)
-![ Texto alter](assets/images/image2.PNG)
-![ Texto alter](assets/images/image2.1.PNG)
-![ Texto alter](assets/images/image3.PNG)
+![ Texto alter](assets/images/image.png)
+![ Texto alter](assets/images/image1.png)
+![ Texto alter](assets/images/image2.png)
+![ Texto alter](assets/images/image2.1.png)
+![ Texto alter](assets/images/image3.png)
 
 ### Herramientas Tecnologicas  
 - HTML5  
