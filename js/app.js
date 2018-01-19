@@ -172,7 +172,8 @@ function begin() {
   var $searchForm = $('#search-form');
   var $moviesSelected = $('#movies-selected');
   console.log($moviesSelected);
-  // 
+
+  // Evento para poder capturar la búsqueda de la película y pasar función 
   $searchForm.on('submit', function(event) {
     var searchText = $searchForm.find('input').val();
     // console.log(searchText);
@@ -191,6 +192,7 @@ function begin() {
         console.log(response.data.Search);
         var movieSearch = response.data.Search;
         var output = '';
+        $('#predetermined-movies').hide();
         // Recorrer en un lugar de for
         $.each(movieSearch, function(index, value) {
           // console.log(index); // devuelve posición, 0, 1, 2, etc    
@@ -202,6 +204,7 @@ function begin() {
               <div class="movie-box text-center">
                 <img src="${value.Poster}">
                 <button type="button" class="btn btn-info pick-this-movie">${value.Title}</button>
+                <p class="hidden">${value.imdbID}</p>
               </div>
             </div>
           `;
@@ -216,6 +219,8 @@ function begin() {
           var titlePicked = $(this).text();
           // Almacenando temporalmente el nombre del título y la foto
           localStorage.saveTitlePicked = titlePicked;
+          localStorage.savePosterPicked = posterMoviePicked.find('img').attr('src');
+          localStorage.idPicked = posterMoviePicked.find('p');
           $(location).attr('href', 'views/movie.html');
         });
 
@@ -224,7 +229,6 @@ function begin() {
         console.log(err);
       });
   };
-
   /* Alejandra Hoces */
   /* ------------ FUNCIONALIDAD PARA SUBIR FOTOS ------------*/
   /** Función para postear  */

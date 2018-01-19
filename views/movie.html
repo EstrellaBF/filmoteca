@@ -39,13 +39,50 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-8">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore commodi dolorem deserunt dicta saepe minus delectus quas
-          voluptatibus fugit nam neque repudiandae voluptatem, exercitationem minima modi, doloremque dolorum expedita. Aliquam!
+          <div id="movie-data-info">
+            <p class="hidden" id="imdb-code"></p>
+            <div id="plot">
+              <span>Plot</span>
+              <p></p>
+            </div>
+            <div id="actors">
+              <span>Actors</span>
+              <p></p>
+            </div>
+            <div id="awards">
+              <span>Awards</span>
+              <p></p>
+            </div>
+            <div id="year">
+              <span>Year</span>
+              <p></p>
+            </div>
+            <div id="genre">
+              <span>Genre</span>
+              <p></p>
+            </div>
+
+          </div>
+          <div class="movie-data-rating">
+            Ratings
+            <div id="imdb">
+              <span></span>
+              <p></p>
+            </div>
+            <div id="rotten-Tomatoes">
+              <span></span>
+              <p></p>
+            </div>
+            <div id="metacritic">
+              <span></span>
+              <p></p>
+            </div>
+          </div>
         </div>
         <div class="col-xs-4">
           <div class="btn-group btn-group-justified" role="group" aria-label="...">
-            <div class="btn-group" id="viewed-button" role="group">
-              <button type="button" class="btn btn-default">
+            <div class="btn-group" id="" role="group">
+              <button id="viewed-button" type="button" class="btn btn-default">
                 <i class="fa fa-eye" aria-hidden="true"></i>
               </button>
             </div>
@@ -73,8 +110,8 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <label for="el-id-de-textarea">Comentar aquí</label>
-          <textarea class="form-control" rows="3" id="el-id-de-textarea"></textarea>
+          <label for="comment-box">Comentar aquí</label>
+          <textarea class="form-control" rows="3" id="comment-box"></textarea>
           <input class="btn btn-default" type="submit" value="Enviar">
         </div>
       </div>
@@ -97,6 +134,9 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <!-- JS Personalizado -->
   <script type="text/javascript" src="../js/movie.js"></script>
+  <!--  -->
+  <script type="text/javascript" src="../js/save.js"></script>
+  
 </body>
 
 </html>

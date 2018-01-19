@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var $movieInfoPicked = $('#movie-info-picked');
-  var $viewedButton = $('#viewed-button');
+  
 
   // Pluggin
   $('#star1').rating('votar.php', { maxvalue: 5, curvalue: 1, id : 20 });
@@ -27,9 +27,6 @@ $(document).ready(function() {
       console.log(error);
     });
 
-  // Evento para el boton de visto
-  $viewedButton.on('click', function() {
-
-  });
+    
 
 });

@@ -91,6 +91,7 @@ input#search-movie-input:focus, input#search-movie-input:active {
 }
 
 .movie-box img {
+  height: 80%;
   width: 100%;
 }
 
@@ -105,7 +106,13 @@ input#search-movie-input:focus, input#search-movie-input:active {
 
 /* Movie HTML */
 .movie-info-picked {
-  
+  display: flex;
+  flex-direction: column;
+  text-align: -webkit-center;
+}
+
+#imdb-code {
+  display: none;
 }
 
 /* ------------estilos vista de perfil ------------*/
@@ -184,6 +191,9 @@ input#search-movie-input:focus, input#search-movie-input:active {
   height: 7vh;
   color: white;
   padding-top: 1rem;
+  position: relative;
+  bottom: 0;
+  margin-bottom: 0;
 }
 /*estilo para visualizar cuando se encuentre en mobile*/
 .view-movile {
