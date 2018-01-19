@@ -1,12 +1,8 @@
 
 function begin() {
-  var btnRegistry = $('#btnRegistry');
-  var btnAccess = $('#btnAccess');
-  registry();
-  login();
-
+  
   var $searchForm = $('#search-form');
-  var $moviesSelected = $('#movies-selected')
+  var $moviesSelected = $('#movies-selected');
   console.log($moviesSelected);
   // 
   $searchForm.on('submit', function(event) {
