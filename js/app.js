@@ -1,8 +1,10 @@
 function begin() {
   var btnRegistry = $('#btnRegistry');
   var btnAccess = $('#btnAccess');
+
   registry();
   login();
+
   /* Función para crear registro de usuario en Firebase*/
   function registry() {
     var validateNames = false;
@@ -131,18 +133,9 @@ function begin() {
     /* Comparar correo y password */
     btnAccess.on('click', function(event) {
       event.preventDefault();
-      var email2 = $('#user').val();
-      var password2 = $('#key').val();
-      /*
-      firebase.auth().signInWithEmailAndPassword(email2, password2).then(()=>{
-        aler("ssdsd");
-      }).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(errorMessage);
-      
-    }); */
-      firebase.auth().signInWithEmailAndPassword(email2, password2).then(() => {
+      var email = $('#user').val();
+      var password = $('#key').val();
+      firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
         $('span.content-header').html('<h5>' + localStorage.nombres + '</h5>');
       }).catch(function(error) {
         // Handle Errors here.
@@ -153,6 +146,26 @@ function begin() {
         }
       });
 
+      /* Prueba*/
+
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          console.log(uid);
+        } else {
+          // User is signed out.
+          // ...
+        }
+      });
+
+      /* Prueba*/
     });
   };
 
