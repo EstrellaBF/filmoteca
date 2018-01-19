@@ -91,21 +91,35 @@ input#search-movie-input:focus, input#search-movie-input:active {
 }
 
 .movie-box img {
+  height: 80%;
   width: 100%;
 }
 
 .movie-box h5 {
   font-family: 'PT Sans', sans-serif;
 }
-
-/* Section Movies */
 .movies-search-section {
   margin-top: 2rem;
 }
 
 /* Movie HTML */
 .movie-info-picked {
-  
+  background-color: #282829;
+  display: flex;
+  flex-direction: column;
+  text-align: -webkit-center;
+}
+
+#movie-data-info p {
+  font-size: 1.2rem;
+}
+
+#movie-data-info span {
+  font-weight: 700;
+}
+
+#imdb-code {
+  display: none;
 }
 
 /* ------------estilos vista de perfil ------------*/

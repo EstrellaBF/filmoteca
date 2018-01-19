@@ -77,12 +77,12 @@ function begin() {
       
       firebase.auth().createUserWithEmailAndPassword(email, password).then(function(result) {
         var newUser = {
-          uid : result.uid,
-          names : localStorage.nombres,
-          email : localStorage.email
+          uid: result.uid,
+          names: localStorage.nombres,
+          email: localStorage.email
         };
         
-        firebase.database().ref('registro/'+result.uid).set(newUser); 
+        firebase.database().ref('registro/' + result.uid).set(newUser); 
         
         alert('Registro OK');     
       }).catch(function(error) {
@@ -142,12 +142,12 @@ function begin() {
       var password = $('#key').val();
       firebase.auth().signInWithEmailAndPassword(email, password).then(function(result) {
         $('.title-header').html(
-          '<div id="title-header" class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">'+
-          '<ul class="nav navbar-nav navbar-right">'+
-            '<li>'+
-              '<a href="#modal-sesion" data-toggle="modal">'+localStorage.nombres+'</a>'+
-            '</li>'+
-          '</ul>'+
+          '<div id="title-header" class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">' +
+          '<ul class="nav navbar-nav navbar-right">' +
+            '<li>' +
+              '<a href="#modal-sesion" data-toggle="modal">' + localStorage.nombres + '</a>' +
+            '</li>' +
+          '</ul>' +
         '</div>'
         );
       }).catch(function(error) {
@@ -158,15 +158,34 @@ function begin() {
           alert(errorMessage);
         }
       });
-
     });
   };
 
   /* Estrella  */
   var $searchForm = $('#search-form');
   var $moviesSelected = $('#movies-selected');
+  var $clickMoviePredetermined = $('.click-movie-predetermined');
   console.log($moviesSelected);
-  // 
+
+  // Evento para las películas predeterminadas
+  $clickMoviePredetermined.on('click', function() {
+    // console.log($(this).text());
+    var movieIdClick = $(this).parent().find('p').text();
+    console.log(movieIdClick);
+    // Make a request for a user with a given ID
+    axios.get('http://www.omdbapi.com/?i=' + movieIdClick + '&apikey=3a0eede3')
+      .then(function(response) {
+        console.log(response.data);
+        localStorage.saveTitlePicked = response.data.Title;
+        localStorage.savePosterPicked = response.data.Poster;
+        $(location).attr('href', 'views/movie.html');
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  });
+
+  // Evento para poder capturar la búsqueda de la película y pasar función 
   $searchForm.on('submit', function(event) {
     var searchText = $searchForm.find('input').val();
     // console.log(searchText);
@@ -185,6 +204,7 @@ function begin() {
         console.log(response.data.Search);
         var movieSearch = response.data.Search;
         var output = '';
+        $('#predetermined-movies').hide();
         // Recorrer en un lugar de for
         $.each(movieSearch, function(index, value) {
           // console.log(index); // devuelve posición, 0, 1, 2, etc    
@@ -196,6 +216,7 @@ function begin() {
               <div class="movie-box text-center">
                 <img src="${value.Poster}">
                 <button type="button" class="btn btn-info pick-this-movie">${value.Title}</button>
+                <p class="hidden">${value.imdbID}</p>
               </div>
             </div>
           `;
@@ -210,9 +231,10 @@ function begin() {
           var titlePicked = $(this).text();
           // Almacenando temporalmente el nombre del título y la foto
           localStorage.saveTitlePicked = titlePicked;
+          localStorage.savePosterPicked = posterMoviePicked.find('img').attr('src');
+          localStorage.idPicked = posterMoviePicked.find('p');
           $(location).attr('href', 'views/movie.html');
         });
-
       })
       .catch(function(err) {
         console.log(err);
