@@ -3,9 +3,52 @@ $(document).ready(function () {
   var $viewedButton = $('#viewed-button');
   var $movieDataInfo = $('#movie-data-info');
   var imdbIDSelected;
+<<<<<<< HEAD
   var $textAreaComment = $('#text-area-comment');
   var $publishCommentButton = $('#publish-comment-button');
   var getComment;
+=======
+  verifySesion();
+
+  /* Funcion para verificar inicio de sesion o close sesion */
+  function verifySesion() {
+    console.log(jQuery.type(localStorage.tempAccess));
+    if (localStorage.tempAccess === 'true') {
+      console.log('Ingresa al true de tempAccess');
+      $('.title-header').html(
+        '<div id="title-header" class="collapse navbar-collapse title-header" id="bs-example-navbar-collapse-1">' +
+        '<ul class="nav navbar-nav navbar-right">' +
+        '<li class="dropdown">' +
+        '<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + localStorage.nombres + '<span class="caret"></span></a>' +
+        '<ul class="dropdown-menu">' +
+        '<li><a href="views/profile.html">Perfil</a></li>' +
+        '<li><a href="index.html" id="close">Cerrar Sesión</a></li>' +
+        '</ul>' +
+        '</li>' +
+        '</ul>' +
+        '</div>'
+      );
+    } else {
+      console.log('Ingresa al false de tempAccess');
+      $('.title-header').html(
+        '<ul class="nav navbar-nav navbar-right">' +
+        '<li>' +
+        '<a href="#modal-sesion" data-toggle="modal">Iniciar Sesión</a>' +
+        '</li>' +
+        '<li>' +
+        '<a href="#modal-registry" data-toggle="modal" class="t-w">Registrate</a>' +
+        '</li>' +
+        '</ul>'
+      );
+    }
+
+    /* Evento cerrar sesion */
+    $('#close').on('click', function () {
+      localStorage.tempAccess = false;
+    });
+  }
+  
+>>>>>>> 4c052635cfc64fb3d6ca714bbaeb57efaed7a451
   // Pluggin
   // $('#star1').rating('votar.php', { maxvalue: 5, curvalue: 1, id: 20 });
 
