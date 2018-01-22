@@ -28,8 +28,8 @@ CINEFILO EMPEDERNIDO
 Hombre • 27 años • Estudiante de Comunicaciones.
 
 Puntos de dolor  
-  • Desea ver denuevo una pelicula que le gusto pero no recuerda el titulo de la misma.  
-  • Desea tener un espacio para comentar y recomentar sus peliculas.
+  • Quiere ver denuevo una pelicula que le gusto pero no recuerda el titulo de la misma.  
+  • Quiere tener un espacio para comentar y recomentar sus peliculas pero no encuentra un espacio para realizarlo.
 
 Necesidades  
 • Un lugar para guardar sus peliculas favoritas.  
