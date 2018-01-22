@@ -3,11 +3,9 @@ $(document).ready(function () {
   var $viewedButton = $('#viewed-button');
   var $movieDataInfo = $('#movie-data-info');
   var imdbIDSelected;
-<<<<<<< HEAD
   var $textAreaComment = $('#text-area-comment');
   var $publishCommentButton = $('#publish-comment-button');
   var getComment;
-=======
   verifySesion();
 
   /* Funcion para verificar inicio de sesion o close sesion */
@@ -48,7 +46,6 @@ $(document).ready(function () {
     });
   }
   
->>>>>>> 4c052635cfc64fb3d6ca714bbaeb57efaed7a451
   // Pluggin
   // $('#star1').rating('votar.php', { maxvalue: 5, curvalue: 1, id: 20 });
 
