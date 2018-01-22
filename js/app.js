@@ -172,11 +172,14 @@ function begin() {
   var $searchForm = $('#search-form');
   var $moviesSelected = $('#movies-selected');
   var $clickMoviePredetermined = $('.click-movie-predetermined');
-  console.log($moviesSelected);
+  var idMovieSelected;
+  var movieSearch;
+  var searchText;
+  var divMovieParent;
 
-  // Evento para las películas predeterminadas
+  // Event for predetermined movies which is in the main page
   $clickMoviePredetermined.on('click', function() {
-    // console.log($(this).text());
+    // Save id movie at variable
     var movieIdClick = $(this).parent().find('p').text();
     console.log(movieIdClick);
     // Make a request for a user with a given ID
@@ -185,6 +188,7 @@ function begin() {
         console.log(response.data);
         localStorage.saveTitlePicked = response.data.Title;
         localStorage.savePosterPicked = response.data.Poster;
+        localStorage.idPicked = response.data.imdbID;
         $(location).attr('href', 'views/movie.html');
       })
       .catch(function(error) {
@@ -192,16 +196,16 @@ function begin() {
       });
   });
 
-  // Evento para poder capturar la búsqueda de la película y pasar función 
+  // Event for capture the movie that want to search 
   $searchForm.on('submit', function(event) {
-    var searchText = $searchForm.find('input').val();
+    searchText = $searchForm.find('input').val();
     // console.log(searchText);
     // Le paso la función getMovies que buscará en el API de OMDB
     getMovies(searchText);
     event.preventDefault();
   });
 
-  // Función para buscar la película por título
+  // Function for get the movie by title
   function getMovies(searchText) {
     console.log(searchText);
     axios.get('http://www.omdbapi.com/?s=' + searchText + '&apikey=3a0eede3')
@@ -209,15 +213,11 @@ function begin() {
         // Un array con todos los títulos que coinciden
         console.log(response);
         console.log(response.data.Search);
-        var movieSearch = response.data.Search;
+        movieSearch = response.data.Search;
         var output = '';
         $('#predetermined-movies').hide();
-        // Recorrer en un lugar de for
         $.each(movieSearch, function(index, value) {
           // console.log(index); // devuelve posición, 0, 1, 2, etc    
-          // console.log(value); //Objeto que contiene tittle, year, etc
-          // console.log(movieSearch[index]);
-          // console.log(movieSearch);
           output += `
             <div class="col-xs-6 col-md-3 clearfix">
               <div class="movie-box text-center">
@@ -230,17 +230,24 @@ function begin() {
         });
         $moviesSelected.html(output);
 
-
-        // Función para jalar el contenido del botón al hacer click
+        // Function fot get the movie's info
         $('.pick-this-movie').on('click', function() {
-          var posterMoviePicked = $(this).parent();
-          console.log(posterMoviePicked.find('img').attr('src'));
-          var titlePicked = $(this).text();
-          // Almacenando temporalmente el nombre del título y la foto
-          localStorage.saveTitlePicked = titlePicked;
-          localStorage.savePosterPicked = posterMoviePicked.find('img').attr('src');
-          localStorage.idPicked = posterMoviePicked.find('p');
-          $(location).attr('href', 'views/movie.html');
+          divMovieParent = $(this).parent();
+          console.log(divMovieParent.find('p').text());
+          idMovieSelected = divMovieParent.find('p').text();
+          console.log(idMovieSelected);
+          axios.get('http://www.omdbapi.com/?i=' + idMovieSelected + '&apikey=3a0eede3')
+            .then(function(response) {
+              console.log(response.data);
+              localStorage.saveTitlePicked = response.data.Title;
+              localStorage.savePosterPicked = response.data.Poster;
+              localStorage.idPicked = idMovieSelected;
+              console.log(idMovieSelected);
+              $(location).attr('href', 'views/movie.html');
+            })
+            .catch(function(error) {
+              console.log(error);
+            });
         });
       })
       .catch(function(err) {
