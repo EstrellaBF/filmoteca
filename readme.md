@@ -1,7 +1,17 @@
-![Sin titulo](assets/images/header.png)  
-**Challenge Hackathon**  
-## **REQUERIMIENTOS**  
-En esta ocasión la temática será el consumo de películas y para ello crearemos soluciones/productos utilizando el API de Open Movie Database (OMDB) o the movie database
+# Filmoteca
+Web que guarda las peliculas vistas y de consulta de la información.
+
+![filmoteca](assets/images/main.png)
+
+## Desarrollado para [Laboratoria](http://laboratoria.la)
+
+### Miembros:
+- Estrella Benites
+- Alejandra Hoces
+- Lidia Ramirez
+
+## Resumen
+Filmoteca una Web-App en la cual ademas de buscar las películas que desees y ver su información podrás guardarlas en tu perfil de manera detallada,la cual te recuerda que películas has visto ,que películas has guardado para verlas después y cuales has marcado como favoritas. Y la podrás consultar cuando desees a su vez podrás consultar artículos de tus películas favoritas nosotros te ayudaremos con tu búsqueda.
 
 ## **ORGANIZACIÓN**
 DIA 1 : ENTENDIENDO LAS NECESIDADES DEL USUARIO  
@@ -10,7 +20,7 @@ DIA 1 : DEFINIR EL PRODUCTO MINIMO VIABLE
 DIA 2: SKETCH DE NUESTRO PROYECTO  
 DIA 2 :  PATRONES DE INTERFAZ DE USUARIO (UI): COLORES NEGRO Y AMARILLO (SIMULA LA SENSACION DE ESTAR EN EL CINE.)  
 DIA 2 : MAQUETACION WEB  
-DIA 2 y 3 :  FUNCIONALIDAD  
+DIA 2 y 3 :  FUNCIONALIDAD
 
 ## **ENTENDIENDO LAS NECESIDADES DEL USUARIO**
 
@@ -38,9 +48,6 @@ Necesidades
 Objetivos  
 • Llevar un record de todas las películas que ha visto en su vida.  
 • Ir agregando peliculas adicionales cada vez que las vea.
-## **PRODUCTO MINIMO VIABLE**
-Filmoteca una Web-App en la cual ademas de buscar las películas que desees y ver su información podrás guardarlas en tu perfil de manera detallada,la cual te recuerda que películas has visto ,que películas has guardado para verlas después y cuales has marcado como favoritas. Y la podrás consultar cuando desees a su vez podrás consultar artículos de tus películas favoritas nosotros te ayudaremos con tu búsqueda.
-
 
 ## **SKETCH**
 Vista principal  
@@ -79,7 +86,3 @@ Vista perfil
 - Axios
 - API de Open Movie Database (OMDB)
 
-### Integrantes  
-- Estrella Benites
-- Alejandra Hoces  
-- Lidia Ramirez
