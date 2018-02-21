@@ -114,6 +114,12 @@ input#search-movie-input:focus, input#search-movie-input:active {
   text-decoration: underline solid #F6EC14;
   font-weight: 600;
 }
+.section-save {
+  color: #FFF;
+  width: 10%;
+  height: 80%;
+  background: #0079bf;
+}
 .movie-box {
   height: 53vh;
 }
@@ -135,7 +141,7 @@ input#search-movie-input:focus, input#search-movie-input:active {
 
 .movie-box img {
   height: 80%;
-  width: 100%;
+  width: 90%;
 }
 
 .movie-box h5 {

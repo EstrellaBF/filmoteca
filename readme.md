@@ -1,7 +1,7 @@
 # Filmoteca
 Web que guarda las peliculas vistas y de consulta de la información.
 
-![filmoteca](assets/images/main.png)
+![filmoteca](https://fotos.subefotos.com/b470b174a005349a9183ea2da3269feao.png)
 
 ## Desarrollado para [Laboratoria](http://laboratoria.la)
 
