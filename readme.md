@@ -1,5 +1,5 @@
 # Filmoteca
-Web que guarda las peliculas vistas y de consulta de la información.
+Web que guarda las películas vistas y para consultar información.
 
 ![filmoteca](https://fotos.subefotos.com/b470b174a005349a9183ea2da3269feao.png)
 
