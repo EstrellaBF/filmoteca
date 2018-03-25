@@ -160,6 +160,9 @@ input#search-movie-input:focus, input#search-movie-input:active {
   margin: 1em 0;
 }
 
+.container-comments {
+  background-color: #000;
+}
 .articles-black {
   padding: 2.5rem;
 }
