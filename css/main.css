@@ -430,7 +430,7 @@ input#search-movie-input:focus, input#search-movie-input:active {
   }
   
   .movie-box {
-    height: 55vh;
+    height: 65vh;
     /* width: 100%; */
     margin-bottom: 2em;
   }

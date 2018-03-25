@@ -1,3 +1,6 @@
+>ACEPTAR EL SCRIPT PARA QUE FUNCIONE CORRECTAMENTE
+![script](assets/images/script-error.png)
+
 # Filmoteca
 Web que guarda las películas vistas y para consultar información.
 
