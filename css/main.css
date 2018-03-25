@@ -376,6 +376,17 @@ input#search-movie-input:focus, input#search-movie-input:active {
     border: none;
     background: #282829;
   }
+
+  section#predetermined-movies {
+    margin-top: 3em;
+  }
+
+  .movie-box {
+    height: 55vh;
+    /* width: 100%; */
+    margin-bottom: 2em;
+  }
+
 }
 /*vista desktop*/
 @media (min-width: 1200px) {
@@ -417,5 +428,12 @@ input#search-movie-input:focus, input#search-movie-input:active {
   .view-desktop {
     display: block;
   }
+  
+  .movie-box {
+    height: 55vh;
+    /* width: 100%; */
+    margin-bottom: 2em;
+  }
+
 }
 /* ------------fin estilos vista de perfil ------------*/
