@@ -86,6 +86,7 @@ function begin() {
         firebase.database().ref('registro/' + result.uid).set(newUser);
 
         alert('Registro OK');
+        console.log(names);
       }).catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;

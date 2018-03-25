@@ -30,6 +30,7 @@ function registry() {
   /* Validar al escribir en nombres */
   $('#names').on('input', function () {
     var NAMES = /^([A-z ñáéíóú]{2,8})$/;
+    console.log($(this).val)
     if (NAMES.test($(this).val())) {
       validateNames = true;
       activeButton();
@@ -58,6 +59,7 @@ function registry() {
   });
 
   $checked.on('click', function (event) {
+    console.log($(this));
     if ($checked.prop('checked')) {
       validateChecked = true;
       activeButton();
@@ -65,6 +67,7 @@ function registry() {
       desactiveButton();
     }
   });
+
   /* Registro en firebase */
   btnRegistry.on('click', function (event) {
     event.preventDefault();
@@ -84,7 +87,7 @@ function registry() {
       };
 
       firebase.database().ref('registro/' + result.uid).set(newUser);
-
+    
       alert('Registro OK');
     }).catch(function (error) {
       var errorCode = error.code;

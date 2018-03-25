@@ -55,19 +55,19 @@
     </div>
   </nav>
 </header>
-  <main class="container-muvi1">
+  <main class="container-movie1">
     <div class="container">
       <div class="row">
         <div id="movie-info-picked" class="movie-info-picked">
           <img src="" alt="">
-          <h4 class="title-muvi">Este es el nombre de la peli</h4>
+          <h4 class="title-movie">Este es el nombre de la peli</h4>
         </div>
         <!-- El plugin de Estrellas -->
         <div id="star1" class="rating">&nbsp;</div>
       </div>
     </div>
   </main>
-  <section class="container-muvi">
+  <section class="container-movie">
     <div class="container">
       <div class="row">
         <div class="col-xs-8">
@@ -111,30 +111,31 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-4">
+        <!-- PONERLE ESTILOS MAS ADELANTE -->
+        <!-- <div class="col-xs-4">
           <div class="btn-group btn-group-justified" role="group" aria-label="...">
             <div class="btn-group" id="viewed-button" role="group">
-              <button type="button" class="btn btn-default btn-muvi">
+              <button type="button" class="btn btn-default btn-movie">
                 <i class="fa fa-eye" aria-hidden="true"></i>
               </button>
             </div>
             <div class="btn-group" id="add-button" role="group">
-              <button type="button" class="btn btn-default btn-muvi">
+              <button type="button" class="btn btn-default btn-movie">
                 <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
               </button>
             </div>
             <div class="btn-group" id="favourite-button" role="group">
-              <button type="button" class="btn btn-default btn-muvi ">
+              <button type="button" class="btn btn-default btn-movie ">
                 <i class="fa fa-star-o" aria-hidden="true"></i>
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <!-- <div class="container">
 			<div class="row">
 				<div class="">
 					<form class="black articles-black">
@@ -151,22 +152,21 @@
 			</div>
 		</div>
     <br>
-    <br>
+    <br> -->
     <div class="container ">
 			<div class="row black post-black">
 				<h3 class="padding-left yellow">Comentar</h3>
 				<br>
-				<div class="col-xs-7">
+				<div class="col-xs-12">
 					<form class="">
-						<textarea class="form-control" id="text-area-comment" rows="7"></textarea>
-						<br>
+            <textarea class="form-control" id="text-area-comment" rows="7"></textarea>
+            <br>
+            <button id="publish-comment-button" type="button" class="btn btn-lg yellow-bk">Publicar</button>
 					</form>
 				</div>
-				<div class="col-xs-2">
-          <form id="publish-comment-button">
-            <button type="submit" class="btn btn-lg yellow-bk">Publicar</button>
-          </form>  
-				</div>
+        <div class="col-xs-12">
+          <div id="comments-box"></div>
+        </div>
 			</div>
 		</div>
     <div class="view-movile buttons-mobile">

@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   /* Funcion para verificar inicio de sesion o close sesion */
   function verifySesion() {
-    console.log(jQuery.type(localStorage.tempAccess));
+    // console.log(jQuery.type(localStorage.tempAccess));
     if (localStorage.tempAccess === 'true') {
       console.log('Ingresa al true de tempAccess');
       $('.title-header').html(
@@ -27,7 +27,7 @@ $(document).ready(function () {
         '</div>'
       );
     } else {
-      console.log('Ingresa al false de tempAccess');
+      // console.log('Ingresa al false de tempAccess');
       $('.title-header').html(
         '<ul class="nav navbar-nav navbar-right">' +
         '<li>' +
@@ -80,13 +80,20 @@ $(document).ready(function () {
     });
 
   // Function to comment
-  console.log($textAreaComment);
-  console.log($publishCommentButton);
 
   // Evento para el texto que se ingresa en el área de comentarios
   // function commentValue(){  }
-  $textAreaComment.on('click', function(event) {
-    getComment = $(this).val();
+  $('#publish-comment-button').on('click', function() {
+    event.preventDefault();
+    getComment = $('#text-area-comment').val();
+    console.log(getComment);
+    if(getComment.length>0){
+      $('#comments-box').prepend(`
+        <div id="comment-box" class="form-control each-comment">${getComment}</div>`
+      );
+      $('#text-area-comment').val('');     
+    }
+
   })
 
 });

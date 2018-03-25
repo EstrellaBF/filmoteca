@@ -28,6 +28,29 @@
 .t-b {
   font-weight: bold;
 }
+
+/* HEADER */
+.navbar-header {
+  padding: 1em 0 1em 1em;
+}
+
+.navbar-header a img{
+  width: 45%;
+}
+
+.navbar-header button {
+  /* position: relative; */
+  float: right;
+  padding: 0 !important;
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
 .div-user {
   float: right;
   margin: 0 10px;
@@ -85,7 +108,7 @@ input#search-movie-input:focus, input#search-movie-input:active {
   color: #F6EC14;
   background-color: #282829;
 }
-.container-muvi1 {
+.container-movie1 {
   background-color:black;
   color: white;
 }
@@ -96,11 +119,11 @@ input#search-movie-input:focus, input#search-movie-input:active {
 .yellow {
   color: #F6EC14;
 }
-.container-muvi {
+.container-movie {
   background-color:#282829;
   color: white;
 }
-.btn-muvi {
+.btn-movie {
   background: #199fe8;
   color: white;
   border: 1px solid white;
@@ -108,10 +131,9 @@ input#search-movie-input:focus, input#search-movie-input:active {
   font-size: 1.5rem;
 }
 
-.title-muvi {
+.title-movie {
   font-size: 3.5rem;
   color: white;
-  text-decoration: underline solid #F6EC14;
   font-weight: 600;
 }
 .section-save {
@@ -121,8 +143,23 @@ input#search-movie-input:focus, input#search-movie-input:active {
   background: #0079bf;
 }
 .movie-box {
-  height: 53vh;
+  height: 35vh;
+  /* width: 100%; */
+  margin-bottom: 2em;
 }
+
+.movie-box button {
+  margin-top: 0.53em;
+}
+
+#publish-comment-button:enabled, .movie-box button:focus{
+  outline: none !important;
+}
+
+.each-comment {
+  margin: 1em 0;
+}
+
 .articles-black {
   padding: 2.5rem;
 }
@@ -166,7 +203,7 @@ input#search-movie-input:focus, input#search-movie-input:active {
 
 /* ------------estilos vista de perfil ------------*/
 .profile-logo {
-  width: 5rem;
+  width: 3rem;
   display: inline-block;
 }
 .name-logo {
@@ -232,7 +269,7 @@ input#search-movie-input:focus, input#search-movie-input:active {
   margin-left: 30rem;
 }
 
-.profile-muvi {
+.profile-movie {
   background: #282829;
 }
 .profile-footer {
