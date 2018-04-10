@@ -8,16 +8,17 @@ Bicis locas es una tienda online, en la cual encontrarás tu bici ideal. Sólo l
 [Laboratoria](assets/images/script-error.png)
 
 
->ACEPTAR EL SCRIPT PARA QUE FUNCIONE CORRECTAMENTE
-![script](assets/images/script-error.png)
 
-## Desarrollado para [Laboratoria](http://laboratoria.la)
+
 Website realizado para que el usuario pueda encontrar información de las películas que desee. El buscador jala la información del API de OMDB. De esta forma se podrá ver datos como ratings, director, actores, reseña y demás de las películas buscadas.
 ### Miembros:
 - Estrella Benites
 - Alejandra Hoces
 - Lidia Ramirez
 
+
+>ACEPTAR EL SCRIPT PARA QUE FUNCIONE CORRECTAMENTE
+![script](assets/images/script-error.png)
 ## Resumen
 Filmoteca una Web-App en la cual ademas de buscar las películas que desees y ver su información podrás guardarlas en tu perfil de manera detallada,la cual te recuerda que películas has visto ,que películas has guardado para verlas después y cuales has marcado como favoritas. Y la podrás consultar cuando desees a su vez podrás consultar artículos de tus películas favoritas nosotros te ayudaremos con tu búsqueda.
 
