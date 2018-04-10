@@ -1,7 +1,6 @@
 
 # Filmoteca
-Aquí podrás encontrar toda la información de tus películas favoritas. Puedes encontrar películas en estreno como los clásicos favoritos.
-
+Website realizado para que el usuario pueda encontrar información de las películas que desee. El buscador jala la información del API de OMDB. De esta forma se podrá ver datos como ratings, director, actores, reseña y demás de las películas buscadas.
 
 ![filmoteca](https://fotos.subefotos.com/b470b174a005349a9183ea2da3269feao.png)
 
