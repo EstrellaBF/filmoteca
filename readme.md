@@ -1,10 +1,13 @@
->ACEPTAR EL SCRIPT PARA QUE FUNCIONE CORRECTAMENTE
-![script](assets/images/script-error.png)
 
 # Filmoteca
-Web que guarda las películas vistas y para consultar información.
+Aquí podrás encontrar toda la información de tus películas favoritas. Puedes encontrar películas en estreno como los clásicos favoritos.
+
 
 ![filmoteca](https://fotos.subefotos.com/b470b174a005349a9183ea2da3269feao.png)
+
+
+>ACEPTAR EL SCRIPT PARA QUE FUNCIONE CORRECTAMENTE
+![script](assets/images/script-error.png)
 
 ## Desarrollado para [Laboratoria](http://laboratoria.la)
 
@@ -85,7 +88,7 @@ Vista perfil
 - Jquery  
 - JS  
 - Framework Bootstrap
-- Farebase (Autenticación)
+- Firebase (Autenticación)
 - Axios
 - API de Open Movie Database (OMDB)
 
