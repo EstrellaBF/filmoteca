@@ -4,6 +4,9 @@ Bicis locas es una tienda online, en la cual encontrarás tu bici ideal. Sólo l
 
 ![filmoteca](https://fotos.subefotos.com/b470b174a005349a9183ea2da3269feao.png)
 
+## Desarrollado para 
+[Laboratoria](assets/images/script-error.png)
+
 
 >ACEPTAR EL SCRIPT PARA QUE FUNCIONE CORRECTAMENTE
 ![script](assets/images/script-error.png)
