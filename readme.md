@@ -1,16 +1,12 @@
 
 # Filmoteca
-Bicis locas es una tienda online, en la cual encontrarás tu bici ideal. Sólo llena el formulario y te contáctaremos.
+Website realizado para que el usuario pueda encontrar información de las películas que desee. El buscador jala la información del API de OMDB. De esta forma se podrá ver datos como ratings, director, actores, reseña y demás de las películas buscadas.
 
 ![filmoteca](https://fotos.subefotos.com/b470b174a005349a9183ea2da3269feao.png)
 
 ## Desarrollado para 
 [Laboratoria](assets/images/script-error.png)
 
-
-
-
-Website realizado para que el usuario pueda encontrar información de las películas que desee. El buscador jala la información del API de OMDB. De esta forma se podrá ver datos como ratings, director, actores, reseña y demás de las películas buscadas.
 ### Miembros:
 - Estrella Benites
 - Alejandra Hoces
